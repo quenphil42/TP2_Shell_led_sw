@@ -1,0 +1,28 @@
+22:29:27 **** Incremental Build of configuration Debug for project Tache_LED ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F746xx -c -I../Core/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc -I../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F7xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM7/r0p1 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:126:7: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+  126 |       ledtest, /* Function that implements the task. */
+      |       ^~~~~~~
+      |       |
+      |       int (*)(void)
+In file included from ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:57,
+                 from ../Core/Src/main.c:21:
+../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:330:41: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'int (*)(void)'
+  330 |  BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+      |                          ~~~~~~~~~~~~~~~^~~~~~~~~~
+arm-none-eabi-gcc -o "Tache_LED.elf" @"objects.list"   -mcpu=cortex-m7 -T"D:\Quentin_Documents\Cergy\ENSEA\3A\Noyau Temps Reel\TP2-Shell\Tache_LED\STM32F746NGHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Tache_LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Tache_LED.elf
+ 
+arm-none-eabi-size   Tache_LED.elf 
+arm-none-eabi-objdump -h -S  Tache_LED.elf  > "Tache_LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  23728	    124	  18028	  41880	   a398	Tache_LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Tache_LED.list
+ 
+
+22:29:30 Build Finished. 0 errors, 1 warnings. (took 3s.161ms)
+

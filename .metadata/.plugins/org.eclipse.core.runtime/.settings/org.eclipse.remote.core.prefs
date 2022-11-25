@@ -1,0 +1,11 @@
+connections/org.eclipse.remote.serial.core.connectionType/F7/serial.baudRate=11
+connections/org.eclipse.remote.serial.core.connectionType/F7/serial.byteSize=3
+connections/org.eclipse.remote.serial.core.connectionType/F7/serial.parity=0
+connections/org.eclipse.remote.serial.core.connectionType/F7/serial.portName=COM7
+connections/org.eclipse.remote.serial.core.connectionType/F7/serial.stopBits=0
+connections/org.eclipse.remote.serial.core.connectionType/stm32f7/serial.baudRate=11
+connections/org.eclipse.remote.serial.core.connectionType/stm32f7/serial.byteSize=3
+connections/org.eclipse.remote.serial.core.connectionType/stm32f7/serial.parity=0
+connections/org.eclipse.remote.serial.core.connectionType/stm32f7/serial.portName=COM7
+connections/org.eclipse.remote.serial.core.connectionType/stm32f7/serial.stopBits=0
+eclipse.preferences.version=1
